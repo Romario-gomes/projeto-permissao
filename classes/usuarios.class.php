@@ -18,7 +18,6 @@ class Usuarios {
 
 		if($sql->rowCount() > 0) {
 			$sql = $sql->fetch();
-
 			$_SESSION['logado'] = $sql['id'];
 
 			return true;

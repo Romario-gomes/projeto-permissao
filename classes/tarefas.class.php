@@ -33,8 +33,6 @@ class Tarefas {
 
 	public function editarTarefa($id, $titulo, $descricao) {
 		$sql =  "UPDATE tb_tarefas SET titulo = :titulo, descricao = :descricao WHERE id = :id";
-
-
 		$sql = $this->pdo->prepare($sql);
     $sql->bindValue(':titulo', $titulo);
     $sql->bindValue(':descricao', $descricao);
@@ -64,7 +62,6 @@ class Tarefas {
 
 			return true;
 		}
-
 		return false;
 	}
 
@@ -78,6 +75,4 @@ class Tarefas {
 
 		return true;
 	}
-
-
 }
